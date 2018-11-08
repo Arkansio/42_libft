@@ -6,9 +6,11 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 15:11:43 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/07 15:18:48 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/08 19:48:49 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -17,12 +19,14 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char* tsrc;
 
 	tdst = (unsigned char*)dst;
-	tsrc = (unsigned char*)tsrc;
+	tsrc = (unsigned char*)src;
+	if(!ft_memalloc(len))
+		return (NULL);
 	i = 0;
 	while (i < len)
 	{
 		tdst[i] = tsrc[i];
-
 		i++;
 	}
+	return (dst);
 }

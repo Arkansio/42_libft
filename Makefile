@@ -6,7 +6,7 @@
 #    By: mgessa <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/20 23:24:40 by mgessa            #+#    #+#              #
-#    Updated: 2018/11/08 16:49:13 by mgessa           ###   ########.fr        #
+#    Updated: 2018/11/08 19:48:03 by mgessa           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,8 @@ SRCS =	ft_memset.c \
 		ft_striter.c \
 		ft_striteri.c \
 		ft_strmap.c \
-		ft_strsub.c
+		ft_strsub.c\
+		ft_memmove.c
 
 FLAGS = -Wall \
 		-Wextra \

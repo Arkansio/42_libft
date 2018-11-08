@@ -1,25 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 20:47:01 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/08 20:57:01 by mgessa           ###   ########.fr       */
+/*   Created: 2018/11/08 20:59:58 by mgessa            #+#    #+#             */
+/*   Updated: 2018/11/08 21:03:10 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+int		ft_check_ex(int nb)
 {
-	int i;
-
-	i = 0;
-	while (s[i])
+	if (nb == -2147483648)
 	{
-		ft_putchar_fd(s[i], fd);
-		i++;
+		ft_putchar('-');
+		ft_putchar('2');
+		return (1);
 	}
+	return (0);
+}
+
+void	ft_putnbr(int n)
+{
+	int temp;
+	int size;
+	int nb_res;
+
+	temp = n;
+	size = 1;
+	if (n < 0)
+	{
+		if (ft_check_ex(n))
+		{
+			ft_putnbr(147483648);
+			return ;
+		}
+		ft_putchar('-');
+		n = -n;
+	}
+	while (temp /= 10)
+		size *= 10;
+	while (size)
+	{
+		nb_res = (n / size) % 10;
+		size /= 10;
+		ft_putchar('0' + nb_res);
+	}	
 }

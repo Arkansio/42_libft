@@ -6,13 +6,13 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 21:07:44 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/08 21:12:39 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/08 21:15:05 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_check_ex(int nb, int fd)
+int		ft_check_ex_fd(int nb, int fd)
 {
 	if (nb == -2147483648)
 	{
@@ -33,7 +33,7 @@ void	ft_putnbr_fd(int n, int fd)
 	size = 1;
 	if (n < 0)
 	{
-		if (ft_check_ex(n, fd))
+		if (ft_check_ex_fd(n, fd))
 		{
 			ft_putnbr(147483648);
 			return ;

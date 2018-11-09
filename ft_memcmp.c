@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 16:19:42 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/09 16:15:48 by mgessa           ###   ########.fr       */
+/*   Created: 2018/11/09 16:03:17 by mgessa            #+#    #+#             */
+/*   Updated: 2018/11/09 16:11:30 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int		i;
+	size_t i;
+	unsigned char *str1;
+	unsigned char *str2;
 
 	i = 0;
-	while (as[i] != '\0')
+	str1 = (unsigned char*)s1;
+	str2 = (unsigned char*)s2;
+	while (i < n)
 	{
-		ft_memdel((void*)as + i);
+		if (str1[i] - str2[i] != 0)
+			return (str1[i] - str2[i]);
 		i++;
 	}
-	ft_memdel((void*)*as);
+	return (0);
 }

@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 16:19:42 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/09 16:15:48 by mgessa           ###   ########.fr       */
+/*   Created: 2018/11/09 15:39:53 by mgessa            #+#    #+#             */
+/*   Updated: 2018/11/09 15:45:55 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+char	*ft_itoa(int n)
 {
-	int		i;
+	int	size;
+	int	tmp;
 
-	i = 0;
-	while (as[i] != '\0')
-	{
-		ft_memdel((void*)as + i);
-		i++;
-	}
-	ft_memdel((void*)*as);
+	tmp = n;
+	size = 1;
+	while (n /= 10)
+		size *= 10;
+	gif ()
 }

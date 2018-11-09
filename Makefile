@@ -6,7 +6,7 @@
 #    By: mgessa <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/20 23:24:40 by mgessa            #+#    #+#              #
-#    Updated: 2018/11/09 16:54:20 by mgessa           ###   ########.fr        #
+#    Updated: 2018/11/09 17:05:18 by mgessa           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ SRCS =	ft_memset.c \
 		ft_striter.c \
 		ft_striteri.c \
 		ft_strmap.c \
+		ft_strmapi.c \
 		ft_strequ.c \
 		ft_strnequ.c \
 		ft_strsub.c \

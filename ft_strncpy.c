@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 16:47:52 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/08 19:29:44 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/09 18:27:31 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 	size_t i;
 
 	i = 0;
-	while (i < len)
+	while (i < len && dst[i] != '\0')
 	{
-		if (!dst[i])
-			return (dst);
 		if (src[i])
 			dst[i] = src[i];
 		else

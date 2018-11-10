@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 18:51:28 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/10 21:32:59 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/10 21:52:43 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	ft_strcat(str, s1);
 	ft_strcat(str, s2);
-	str[sz1 + sz2] = '\0';
+	str[sz1 + sz2 + 1] = '\0';
 	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 19:26:22 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/10 21:22:57 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/10 22:06:27 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,12 @@ char	*ft_strtrim(char const *s)
 	srt_bl = 0;
 	ft_count_blank(s, &end_bl, &srt_bl);
 	sz = ft_strlen(s);
-	if (sz == srt_bl)
-		return (NULL);
 	sz -= srt_bl + end_bl;
-	if(!(str = ft_strnew(sz + 1)))
+	if (sz <= 0)
+		sz = 0;
+	if(!(str = ft_strnew(sz)))
 			return (NULL);
 	ft_strncpy(str, &s[srt_bl], sz);
+	str[sz] = '\0';
 	return (str);
 }

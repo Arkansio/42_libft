@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 16:40:17 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/10 21:38:44 by mgessa           ###   ########.fr       */
+/*   Created: 2018/11/10 18:51:28 by mgessa            #+#    #+#             */
+/*   Updated: 2018/11/10 21:32:59 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned int 	size;
-	char			*str;
-	unsigned int	i;
+	int		sz1;
+	int		sz2;
+	char	*str;
 
-	i = 0;
-	size = 0;
-	str = NULL;
-	size = ft_strlen(s);
-	if (!(str = ft_strnew(size)))
+	sz1 = ft_strlen(s1);
+	sz2 = ft_strlen(s2);
+	if (!(str = (char*)malloc(sizeof(char) * (sz1 + sz2 + 1))))
 		return (NULL);
-	while (i < size)
-	{
-		str[i] = f(s[i]);
-		i++;
-	}
-	str[i] = '\0';
+	ft_strcat(str, s1);
+	ft_strcat(str, s2);
+	str[sz1 + sz2] = '\0';
 	return (str);
 }

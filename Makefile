@@ -6,7 +6,7 @@
 #    By: mgessa <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/20 23:24:40 by mgessa            #+#    #+#              #
-#    Updated: 2018/11/09 17:05:18 by mgessa           ###   ########.fr        #
+#    Updated: 2018/11/10 19:56:04 by mgessa           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,8 @@ SRCS =	ft_memset.c \
 		ft_strequ.c \
 		ft_strnequ.c \
 		ft_strsub.c \
+		ft_strjoin.c \
+		ft_strtrim.c \
 		ft_memmove.c \
 		ft_memchr.c \
 		ft_memcmp.c \

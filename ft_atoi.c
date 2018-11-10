@@ -6,49 +6,29 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 20:55:51 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/07 21:06:19 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/10 18:51:17 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-void	ft_atoi_boucle(const char *str, int i, int *value)
-{
-	while (str[i])
-	{
-		if (str[i] >= '0' && str[i] <= '9')
-		{
-			*value = (*value * 10) + (str[i] - 48);
-			i++;
-		}
-		else
-			return ;
-	}
-}
-
 
 int		ft_atoi(const char *str)
 {
-	int i;
-	int value;
-	int pos;
-	int already;
+	int		symbol;
+	int		value;
 
-	pos = 1;
+	symbol = 1;
 	value = 0;
-	i = 0;
-	already = 0;
-	while (str[i] < '!')
-		i++;
-	if (str[i] == '-')
+	while (*str < '!' || *str == 127)
+		str++;
+	if (*str == '+' || *str == '-')
 	{
-		pos = -1;
-		i++;
-		already = 1;
+		if (*str == '-')
+			symbol = -1;
+		str++;
 	}
-	if (str[i] == '+')
+	while (*str >= '0' && *str<= '9')
 	{
-		if (already == 1)
-			return (value);
-		i++;
+		value = (value * 10) + (*str - 48);
+		str++;
 	}
-	ft_atoi_boucle(str, i, &value);
-	return (value * pos);
+	return (value * symbol);
 }

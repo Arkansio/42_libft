@@ -6,23 +6,24 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 20:23:17 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/07 20:28:53 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/10 02:46:45 by arkansio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_strcmp(const char *s1, const char *s2)
 {
-	int pos;
-	int diff;
+	int i;
+	unsigned char 	*str1;
+	unsigned char	*str2;
 
-	diff = 0;
-	pos = 0;
-	while (s1[pos] || s2[pos])
+	i = 0;
+	str1 = (unsigned char*)s1;
+	str2 = (unsigned char*)s2;
+	while (str1[i] == str2[i])
 	{
-		diff += (s1[pos] - s2[pos]);
-		if (diff != 0)
-			return (diff);
-		pos++;
+		if (str1[i] == '\0')
+			return (0);
+		i++;
 	}
-	return (diff);	
+	return (str1[i] - str2[i]);
 }

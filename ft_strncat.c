@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:20:24 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/07 17:33:15 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/10 02:53:50 by arkansio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@ char	*ft_strncat(char *restrict dest, const char *restrict src, size_t n)
 	while (dest[i] != '\0')
 		i++;
 	pos_src = 0;
-	while (src[pos_src++] && pos_src < n)
+	while (src[pos_src] && pos_src < n)
 	{
 		dest[i] = src[pos_src];
+		pos_src++;
 		i++;
 	}
 	dest[i] = '\0';

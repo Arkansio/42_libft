@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 15:54:02 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/09 18:47:48 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/10 02:02:12 by arkansio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_memdel(void **ap)
 {
-	if (*ap == NULL)
-		return ;
-	free(*ap);
-	free(ap);
-	*ap = NULL;
+	if (ap)
+	{
+		free(*ap);
+		*ap = NULL;
+	}
 }

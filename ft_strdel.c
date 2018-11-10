@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:19:42 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/09 18:47:03 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/10 02:25:42 by arkansio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,9 @@
 
 void	ft_strdel(char **as)
 {
-	int		i;
-
-	i = 0;
-	while (*as[i] != '\0')
+	if (as)
 	{
-		ft_memdel((void*)*as + i);
-		i++;
+		free(*as);
+		*as = NULL;
 	}
-	ft_memdel((void*)*as);
 }

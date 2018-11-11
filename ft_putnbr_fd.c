@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 21:07:44 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/10 22:08:32 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/11 20:33:15 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void			ft_putnbr_fd(int n, int fd)
 	{
 		if (ft_check_ex_fd(n, fd))
 		{
-			ft_putnbr(147483648);
+			ft_putnbr_fd(147483648, fd);
 			return ;
 		}
 		ft_putchar_fd('-', fd);

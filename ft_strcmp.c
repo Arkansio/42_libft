@@ -6,14 +6,14 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 20:23:17 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/10 02:46:45 by arkansio         ###   ########.fr       */
+/*   Updated: 2018/11/11 18:42:44 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_strcmp(const char *s1, const char *s2)
 {
-	int i;
-	unsigned char 	*str1;
+	int				i;
+	unsigned char	*str1;
 	unsigned char	*str2;
 
 	i = 0;

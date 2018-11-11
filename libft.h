@@ -6,16 +6,16 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 14:44:59 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/10 19:55:43 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/11 18:36:55 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <unistd.h>
-#include <string.h>
-#include <stdlib.h>
+# include <unistd.h>
+# include <string.h>
+# include <stdlib.h>
 
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
@@ -27,7 +27,8 @@ void	ft_putnbr_fd(int n, int fd);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
-void	*ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
+void	*ft_memccpy(void *restrict dst, const void *restrict src, int c,
+		size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t	ft_strlen(const char *s);

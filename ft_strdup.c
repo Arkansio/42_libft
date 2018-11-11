@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 15:28:59 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/08 17:29:04 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/11 18:41:51 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char    *strcpy;
-	size_t     i;
+	char		*strcpy;
+	size_t		i;
 
 	i = 0;
 	while (s1[i])

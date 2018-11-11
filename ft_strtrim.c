@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 19:26:22 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/10 22:06:27 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/11 18:39:10 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static void		ft_count_blank(char const *s, int *end_bl, int *srt_bl)
 	}
 }
 
-char	*ft_strtrim(char const *s)
+char			*ft_strtrim(char const *s)
 {
 	int		end_bl;
 	int		srt_bl;
@@ -53,8 +53,8 @@ char	*ft_strtrim(char const *s)
 	sz -= srt_bl + end_bl;
 	if (sz <= 0)
 		sz = 0;
-	if(!(str = ft_strnew(sz)))
-			return (NULL);
+	if (!(str = ft_strnew(sz)))
+		return (NULL);
 	ft_strncpy(str, &s[srt_bl], sz);
 	str[sz] = '\0';
 	return (str);

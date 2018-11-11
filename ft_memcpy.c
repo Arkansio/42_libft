@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 16:18:10 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/06 16:37:30 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/11 18:45:06 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,5 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 		((char*)dst)[i] = ((char*)src)[i];
 		i++;
 	}
-
 	return (dst);
 }

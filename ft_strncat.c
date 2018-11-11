@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:20:24 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/10 02:53:50 by arkansio         ###   ########.fr       */
+/*   Updated: 2018/11/11 18:33:27 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ char	*ft_strncat(char *restrict dest, const char *restrict src, size_t n)
 		i++;
 	}
 	dest[i] = '\0';
-	return (dest);	
+	return (dest);
 }

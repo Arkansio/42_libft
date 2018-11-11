@@ -6,9 +6,17 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 20:55:51 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/11 18:50:00 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/11 20:16:01 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+int     ft_escape_seq(char c)
+{ 
+	return ((c == '\f' || c == 127)
+		   	|| (c == '\t' || c == '\n'))
+	   	|| ((c == '\r' || c == '\v')
+			   	|| (c == '\f' || c == ' '));
+}
 
 int		ft_atoi(const char *str)
 {
@@ -17,7 +25,7 @@ int		ft_atoi(const char *str)
 
 	symbol = 1;
 	value = 0;
-	while (*str < '!' || *str == 127)
+	while (ft_escape_seq(*str))
 		str++;
 	if (*str == '+' || *str == '-')
 	{

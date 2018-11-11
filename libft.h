@@ -6,16 +6,14 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 14:44:59 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/11 18:36:55 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/11 18:50:40 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <unistd.h>
 # include <string.h>
-# include <stdlib.h>
 
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);

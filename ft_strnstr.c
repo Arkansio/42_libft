@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:57:11 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/12 01:52:34 by arkansio         ###   ########.fr       */
+/*   Updated: 2018/11/12 02:12:51 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	int			sz;
+	int		sz;
 	size_t		i;
 
 	i = 0;

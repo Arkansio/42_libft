@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:57:11 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/12 02:12:51 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/12 02:35:49 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	int		sz;
+	size_t		sz;
 	size_t		i;
 
 	i = 0;
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	sz = ft_strlen(to_find);
 	while (*str != '\0' && len)
 	{
-		if (sz > (int)len)
+		if (sz > len)
 			return (NULL);
 		if (ft_strncmp(str, to_find, sz) == 0)
 			return ((char *)str);

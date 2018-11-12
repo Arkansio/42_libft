@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 14:44:59 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/12 18:56:11 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/12 19:03:52 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,6 @@ char			*ft_strjoin(char const *s1, char const*s2);
 char			*ft_strtrim(char const *s);
 char			*ft_itoa(int n);
 char			**ft_strsplit(char const *s, char c);
+t_list			*ft_lstnew(void const *content, size_t content_size);
 
 #endif

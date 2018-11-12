@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 20:50:40 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/11 18:33:53 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/12 01:17:14 by arkansio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 	while (str1[i] == str2[i] && i < n)
 	{
 		if (str1[i] == '\0')
+			return (0);
+		if (i + 1 == n)
 			return (0);
 		i++;
 	}

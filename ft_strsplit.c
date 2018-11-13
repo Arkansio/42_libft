@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 20:44:26 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/12 18:21:29 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/13 17:49:44 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,6 @@ static int		ft_count_words(char const *s, char c)
 		else
 			i++;
 	}
-	if (s[i - 1] == c)
-		words++;
 	return (words);
 }
 
@@ -85,10 +83,8 @@ char			**ft_strsplit(char const *s, char c)
 		else
 			i++;
 	}
-	if (s[i - 1] == c)
-		tab[i_tab++] = NULL;
 	if (!(tab[i_tab] = malloc(sizeof(char))))
 		return (NULL);
-	tab[i_tab][0] = '\0';
+	tab[i_tab] = 0;
 	return (tab);
 }

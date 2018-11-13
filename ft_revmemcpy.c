@@ -1,43 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_revmemcpy.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 15:11:43 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/13 14:34:39 by mgessa           ###   ########.fr       */
+/*   Created: 2018/11/13 14:18:19 by mgessa            #+#    #+#             */
+/*   Updated: 2018/11/13 14:57:16 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdlib.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_revmemcpy(void *restrict dst, const void *restrict src, size_t n)
 {
 	size_t		i;
-	size_t		j;
-	char		*sdst;
-	char		*ssrc;
+	int			size;
+	int			sz_src;
 
-	sdst = (char*)dst;
-	ssrc = (char*)src;
 	i = 0;
-	j = 0;
-	if (ssrc == sdst)
-		return (dst);
-	while (i < len)
+	sz_src = ft_strlen((char*)src);
+	size = ft_strlen((char*)dst);
+	while (i < n)
 	{
-		if (ssrc < sdst)
-		{
-			sdst = (ft_revmemcpy(sdst, ssrc, len));
-			dst = sdst;
-			return (dst);
-		}
-		sdst[i] = ssrc[j];
+		((char*)dst)[size - 1 - i] = ((char*)src)[sz_src - 1 - i];
 		i++;
-		j++;
 	}
-	dst = sdst;
 	return (dst);
 }

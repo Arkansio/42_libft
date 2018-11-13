@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 14:44:59 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/13 12:47:25 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/14 00:42:55 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *restrict dst, const void *restrict src,
 		size_t n);
+void                    *ft_revmemcpy(void *restrict dst, const void *restrict src,
+                size_t n);
 void			*ft_memccpy(void *restrict dst, const void *restrict src, int c,
 		size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);

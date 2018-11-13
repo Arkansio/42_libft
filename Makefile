@@ -6,7 +6,7 @@
 #    By: mgessa <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/20 23:24:40 by mgessa            #+#    #+#              #
-#    Updated: 2018/11/12 19:03:19 by mgessa           ###   ########.fr        #
+#    Updated: 2018/11/14 00:42:21 by mgessa           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,8 @@ SRCS =	ft_memset.c \
 		ft_putnbr_fd.c \
 		ft_itoa.c \
 		ft_strsplit.c \
-		ft_lstnew.c
+		ft_lstnew.c \
+		ft_revmemcpy.c
 
 FLAGS = -Wall \
 		-Werror \

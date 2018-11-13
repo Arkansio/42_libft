@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_revmemcpy.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 15:11:43 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/14 00:39:59 by mgessa           ###   ########.fr       */
+/*   Created: 2018/11/14 00:40:08 by mgessa            #+#    #+#             */
+/*   Updated: 2018/11/14 00:43:10 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdlib.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void    *ft_revmemcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	unsigned char	*tdst;
-	unsigned char	*tsrc;
-
-	tdst = (unsigned char*)dst;
-	tsrc = (unsigned char*)src;
-	if (tsrc < tdst)
-		while ((int)--len >= 0)
-			*(tdst + len) = *(tsrc + len);
-	else
-		ft_memcpy(tdst, tsrc, len);
-	return (dst);
+        while (n-- >= 0)
+                ((char*)dst)[n] = ((char*)src)[n];
+        return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 19:27:32 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/14 19:45:46 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/14 19:54:38 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static t_list	*ft_recursive(t_list *lst, t_list *(*f)(t_list *elem))
 		return (NULL);
 	new = f(lst);
 	if (lst->next)
-		ft_recursive(lst->next, f);
+		new->next = ft_recursive(lst->next, f);
 	return (new);
 }
 

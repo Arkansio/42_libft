@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 20:44:26 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/14 16:15:06 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/14 16:59:03 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ char			**ft_strsplit(char const *s, char c)
 		return (NULL);
 	ft_init_var(&i, &i_tab);
 	words = ft_count_words(s, c);
-	if (!(tab = malloc(sizeof(char*) * (words + 1))))
+	if (!(tab = (char**)malloc(sizeof(char*) * (words + 1))))
 		return (NULL);
 	while (s[i] != '\0')
 	{
@@ -85,7 +85,7 @@ char			**ft_strsplit(char const *s, char c)
 		else
 			i++;
 	}
-	if (!(tab[i_tab] = malloc(sizeof(char))))
+	if (!(tab[i_tab] = (char*)malloc(sizeof(char))))
 		return (NULL);
 	tab[i_tab] = 0;
 	return (tab);

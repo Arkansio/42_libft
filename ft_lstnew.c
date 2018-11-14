@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 18:57:46 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/12 19:06:15 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/14 16:01:34 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,15 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list	*chain;
 
+	chain = NULL;
 	if (!(chain = malloc(sizeof(t_list))))
 		return (NULL);
 	chain->next = NULL;
 	if (content)
 	{
-		chain->content = (void*)content;
+		if (!(chain->content = malloc(sizeof(content_size))))
+				return (NULL);
+		ft_memcpy(chain->content, content, content_size);
 		chain->content_size = content_size;
 	}
 	else

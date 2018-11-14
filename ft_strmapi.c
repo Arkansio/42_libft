@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 17:03:09 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/11 18:39:47 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/14 16:09:19 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	size = 0;
 	str = NULL;
+	if (!s || !f)
+		return (NULL);
 	size = ft_strlen(s);
 	if (!(str = ft_strnew(size)))
 		return (NULL);

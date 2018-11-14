@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 20:44:26 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/13 17:49:44 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/14 16:15:06 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,8 @@ char			**ft_strsplit(char const *s, char c)
 	char	**tab;
 	int		i_tab;
 
+	if (!s)
+		return (NULL);
 	ft_init_var(&i, &i_tab);
 	words = ft_count_words(s, c);
 	if (!(tab = malloc(sizeof(char*) * (words + 1))))

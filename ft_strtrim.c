@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 19:26:22 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/11 18:39:10 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/14 16:13:30 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ char			*ft_strtrim(char const *s)
 	int		sz;
 	char	*str;
 
+	if (!s)
+		return (NULL);
 	end_bl = 0;
 	srt_bl = 0;
 	ft_count_blank(s, &end_bl, &srt_bl);

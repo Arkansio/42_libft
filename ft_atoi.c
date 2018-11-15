@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 20:55:51 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/11 20:31:43 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/15 14:53:16 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,11 @@ int			ft_atoi(const char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 	{
-		value = (value * 10) + (*str - 48);
+		if (symbol == -1)
+			value = (value * 10) - (*str - 48);
+		else
+			value = (value * 10) + (*str - 48);
 		str++;
 	}
-	return (value * symbol);
+	return (value);
 }

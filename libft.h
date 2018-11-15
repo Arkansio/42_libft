@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 14:44:59 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/14 23:07:21 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/15 14:17:25 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,4 +89,8 @@ void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void			ft_strrev(char *str);
+int				ft_strndigit(char *str, size_t n);
+int				ft_strnalpha(char *str, size_t n);
+int				ft_strprint(char *str, size_t n);
+
 #endif

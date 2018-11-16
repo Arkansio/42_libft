@@ -6,7 +6,7 @@
 #    By: mgessa <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/20 23:24:40 by mgessa            #+#    #+#              #
-#    Updated: 2018/11/15 14:17:01 by mgessa           ###   ########.fr        #
+#    Updated: 2018/11/16 15:42:23 by mgessa           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,7 +83,7 @@ FLAGS = -Wall \
 
 OBJS = $(SRCS:.c=.o)
 
-HEADER = libft.h
+HEADER = includes
 
 all: $(NAME)
 
@@ -100,3 +100,5 @@ fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean re fclean

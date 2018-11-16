@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 17:45:58 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/07 18:46:32 by mgessa           ###   ########.fr       */
+/*   Created: 2018/11/15 22:47:06 by mgessa            #+#    #+#             */
+/*   Updated: 2018/11/16 14:45:05 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "get_next_line.h"
 
-char	*ft_strchr(const char *s, int c)
+int		get_next_line(const int fd, char **line)
 {
-	int		i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-			return ((char*)&s[i]);
-		i++;
-	}
-	if (c == '\0')
-		return ((char*)&s[i]);
-	return (NULL);
+	
 }

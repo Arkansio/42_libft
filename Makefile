@@ -6,7 +6,7 @@
 #    By: mgessa <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/20 23:24:40 by mgessa            #+#    #+#              #
-#    Updated: 2018/11/16 15:42:23 by mgessa           ###   ########.fr        #
+#    Updated: 2018/11/21 19:31:18 by mgessa           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,10 +88,10 @@ HEADER = includes
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc  $(NAME) $^
+	ar rc $(NAME) $^
 
-%.o: %.c
-	gcc $(FLAGS)  -c $^ -I $(HEADER)
+./%.o: ./src/%.c
+	gcc $(FLAGS) -c $^ -I $(HEADER)
 
 clean:
 	/bin/rm -f $(OBJS)

@@ -6,7 +6,7 @@
 /*   By: mgessa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 14:44:59 by mgessa            #+#    #+#             */
-/*   Updated: 2018/11/15 14:39:48 by mgessa           ###   ########.fr       */
+/*   Updated: 2018/11/26 01:57:32 by mgessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ void			ft_putnbr(int n);
 void			ft_putnbr_fd(int n, int fd);
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
-void			*ft_memcpy(void *restrict dst, const void *restrict src,
+void			*ft_memcpy(void *dst, const void *src,
 		size_t n);
-void			*ft_revmemcpy(void *restrict dst, const void *restrict src,
+void			*ft_revmemcpy(void *dst, const void *src,
 				size_t n);
-void			*ft_memccpy(void *restrict dst, const void *restrict src, int c,
+void			*ft_memccpy(void *dst, const void *src, int c,
 		size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -44,10 +44,10 @@ size_t			ft_strlen(const char *s);
 char			*ft_strdup(const char *s1);
 char			*ft_strcpy(char *dst, const char *src);
 char			*ft_strncpy(char *dst, const char *src, size_t len);
-char			*ft_strcat(char *restrict s1, const char *restrict s2);
-char			*ft_strncat(char *restrict s1,
-		const char *restrict s2, size_t n);
-size_t			ft_strlcat(char *restrict dst, const char *restrict src,
+char			*ft_strcat(char *s1, const char *s2);
+char			*ft_strncat(char *s1,
+		const char *s2, size_t n);
+size_t			ft_strlcat(char *dst, const char *src,
 		size_t dstsize);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);

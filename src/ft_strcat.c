@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *restrict dest, const char *restrict src)
+char	*ft_strcat(char *dest, const char *src)
 {
 	int		i;
 	int		pos_src;
